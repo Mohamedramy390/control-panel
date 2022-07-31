@@ -1,0 +1,37 @@
+.c-text-feild{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.c-textfeild__lable{
+    font-size: 15px;
+    margin-bottom: spacing(extrasmall);
+}
+.c-textfeild__input, .c-textfeild__textarea{
+    padding: 8px 16px;
+    width: 100%;
+    height: 36px;
+    border-radius: 3px;
+    margin-bottom: spcing(none);
+    border: 1px solid darken($color-white, 30%);
+    color: $color-content;
+    font-size: 14px;
+    box-shadow: inset 0 1px 2px 0 rgba(darken($color-primary, 30%) , .2);
+
+    &:focus{
+        box-shadow: 0 0 0 1px $color-blue-dark;
+    }
+    &:hover{
+        box-shadow: 0 0 0 1px $color-blue-dark;
+    }
+}
+.c-textfeild__textarea{
+    height: 160px;
+}
+
+.c-textarea__hint{
+    font-size: 14px;
+    color: $color-grey;
+    margin-top: spacing(extrasmall);
+}
