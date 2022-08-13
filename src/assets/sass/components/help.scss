@@ -1,0 +1,9 @@
+.c-help{
+    background-color: white;
+    padding: spacing(extrasmall) spacing(small);
+    border-radius: 20px;
+
+    .c-help__link{
+        color: $color-link;
+    }
+}

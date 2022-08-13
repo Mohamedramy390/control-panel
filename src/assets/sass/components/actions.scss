@@ -1,0 +1,27 @@
+.c-actions{
+    @include e-card;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.c-actions__list{
+    width: 100%;
+    padding: 0 spacing(normal);
+
+    .c-actions__item{
+        width: 100%;
+        justify-content: center;
+        padding: spacing(extrasmall) 0;
+        align-content: center;
+
+        &::marker{
+            color: $color-primary;
+            font-weight: 600;
+            font-size: 20px;
+        }
+    }
+
+}
+.c-actions__btn{
+    float: left;
+}

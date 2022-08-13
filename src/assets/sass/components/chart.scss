@@ -1,0 +1,34 @@
+.c-chart{
+    @include e-card;
+    width: 100%;
+    padding: spacing(normal);
+}
+.c-chart__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.c-summary--small{
+    box-shadow: none;
+    background: none;
+    padding: spacing(none);
+    margin: spacing(none);
+    margin-right: auto;
+    margin-left: spacing(small);
+
+    .c-summary__key{
+        font-size: 13px;
+        text-align: center;
+    }
+    .c-summary__value{
+        font-size: 16px;
+        text-align: center;
+        font-weight: normal;
+    }
+    .c-summary__value--positive{
+        color: $color-blue;
+    }
+}
+.c-chart__data{
+    --color-brand:#2541b2;
+}

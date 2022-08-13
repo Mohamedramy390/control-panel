@@ -9,6 +9,9 @@ module.exports = {
     entry :{
       'app' :"./src/index.js",
       'assets/js/banner': "./src/assets/js/banner.js",
+      'assets/js/tabs': "./src/assets/js/tabs.js",
+      'assets/js/upload': "./src/assets/js/upload.js",
+      'assets/js/chart': "./src/assets/js/chart.js",
     },
     output: {
       path: path.resolve(__dirname, './app'),
@@ -37,14 +40,14 @@ module.exports = {
               ],
           },
           {
-            test: /\.(svg|woff|woff2|ttf|eot)$/,
+            test: /\.(ttf|eot|svg)?(\?[a-z0-9#=&.]+)?$/, 
             exclude :/images/,
             use: [
               {
                 loader: 'file-loader',
                 options:{
                   name: '[name].[ext]',
-                  outputpath:"./assets/fonts"
+                  outputpath:"./assets/fonts/"
                 }
               },
             ],
@@ -104,6 +107,46 @@ module.exports = {
           template:"./src/components/list.html",
           filename:"components/list.html",
           chunks:['app'],
+        }),
+        new HtmlWebpackPlugin({
+          template:"./src/components/tabs.html",
+          filename:"components/tabs.html",
+          chunks:['app', 'assets/js/tabs'],
+        }),
+        new HtmlWebpackPlugin({
+          template:"./src/components/upload.html",
+          filename:"components/upload.html",
+          chunks:['app', 'assets/js/upload'],
+        }),
+        new HtmlWebpackPlugin({
+          template:"./src/components/help.html",
+          filename:"components/help.html",
+          chunks:['app'],
+        }),
+        new HtmlWebpackPlugin({
+          template:"./src/components/summary.html",
+          filename:"components/summary.html",
+          chunks:['app'],
+        }),
+        new HtmlWebpackPlugin({
+          template:"./src/components/actions.html",
+          filename:"components/actions.html",
+          chunks:['app'],
+        }),
+        new HtmlWebpackPlugin({
+          template:"./src/components/sidebar.html",
+          filename:"components/sidebar.html",
+          chunks:['app'],
+        }),
+        new HtmlWebpackPlugin({
+          template:"./src/components/table.html",
+          filename:"components/table.html",
+          chunks:['app'],
+        }),
+        new HtmlWebpackPlugin({
+          template:"./src/components/chart.html",
+          filename:"components/chart.html",
+          chunks:['app', 'assets/js/chart']
         }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({

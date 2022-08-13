@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Component_Name Component's Page</title>
+</head>
+<body>
+    <div class="component-container">
+        <div class="c-upload js-upload">
+            <div class="c-upload__header">
+                <h4 class="c-upload__title">ارفع الصوره</h4>
+                <label for="upload-img" class="c-upload__label">اختر الصوره</label>
+                <span class="c-upload__remove js-upload--remove">حذف الصوره</span>
+            </div>
+            <div class="c-upload__body">
+                <div class="c-upload__image"><img class="js-upload-placeholder"></div>
+                <input type="file" name="upload-img" id="upload-img" class="c-upload___field js-upload__value" accept="image/*">
+                <span class="c-upload__sub">اسحب الصوره هنا</span>
+            </div>
+        </div>
+        <div class="c-upload__small c-upload js-upload">
+            <div class="c-upload__header">
+                <h4 class="c-upload__title">صوره المستخدم</h4>
+            </div>
+            <div class="c-upload__body">
+                <label for="upload-img" class="c-upload__label">اختر الصوره</label>
+                <img class="js-upload-placeholder">
+                <input type="file" name="upload-img" id="upload-img" class="c-upload___field js-upload__value" accept="image/*">
+            </div>
+            <span class="c-upload__remove js-upload--remove">حذف الصوره</span>
+        </div>
+    </div>
+</body>
+</html>

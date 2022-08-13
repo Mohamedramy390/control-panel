@@ -1,0 +1,58 @@
+.c-table{
+    @include e-card;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: spacing(normal);
+}
+.c-table__header{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.c-table__title{
+    display: inline-block;
+    font-size: 20px;
+    margin-bottom: 0;
+    margin-left: spacing(small);
+}
+
+
+.c-table__image{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+}
+.c-table__data{
+    text-align: center;
+    width: 100%;
+    font-size: 16px;
+    border-collapse: collapse;
+    margin: spacing(normal) 0;
+
+    th ,td{
+        
+        padding: spacing(extrasmall) 0;
+        border-bottom: 1px solid rgba(darken(white , 40%), .15) ;
+    }
+}
+.c-table__footer{
+    display: flex;
+
+    .c-table__navigation{
+        margin-right: auto;
+    }
+}
+.c-btn--icon{
+    font-size: 20px;
+    width: 40px;
+    height: 36px;
+    text-align: center;
+    padding: 0;
+}
+.c-table-navigation__caption{
+    display: inline-block;
+    margin-left: spacing(extrasmall);
+}
